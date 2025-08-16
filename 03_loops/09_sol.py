@@ -1,11 +1,9 @@
 items = ["apple","banana","orange","apple","mango"]
-c=0
+unique_items = set()
+
 for item in items:
-    if items.count(item)>1:
-        c=1
-        print(item)
+    if item in unique_items:
+        print("Duplicate: ",item)
         break
     else:
-        continue
-if c!=1:
-    print("Unique")
+        unique_items.add(item)
